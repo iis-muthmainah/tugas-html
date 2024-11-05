@@ -1,0 +1,155 @@
+ /* Reset some styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern and playful font */
+    background: linear-gradient(145deg, #b1d5f9, #e4cef9); /* Soft gradient background */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    text-shadow: 3px 3px 6px rgba(70, 168, 254, 0.427);
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #0a86d8;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Benefit section */
+h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* List Styling */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styling */
+a {
+    background-color: #2ecc71; /* Fresh green button */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 40px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+/* Add Animation on Hover */
+a:active {
+    transform: scale(0.98);
+}
+
+/* Fun background animation */
+@keyframes bubble {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 80px;
+    height: 80px;
+    animation: bubble 4s infinite ease-in-out;
+    bottom: 10px;
+}
+
+.bubble:nth-child(2) {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+    left: 75%;
+    animation-delay: 3s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    a {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+}

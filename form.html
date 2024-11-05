@@ -4,42 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buat Account Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Light background */
+            color: #333; /* Dark text color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2980b9; /* Blue */
+            text-align: center;
+        }
+
+        h2 {
+            color: #e74c3c; /* Red */
+            text-align: center;
+        }
+
+        form {
+            background-color: #ecf0f1; /* Light grey background for form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-width: 400px; /* Limit form width */
+            margin: auto; /* Center the form */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="radio"],
+        input[type="checkbox"],
+        select,
+        textarea {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #bdc3c7; /* Light border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #27ae60; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #219150; /* Darker green on hover */
+        }
+
+        /* Style checkboxes and radio buttons */
+        input[type="radio"], input[type="checkbox"] {
+            width: auto; /* Auto width for checkboxes */
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Buat Account Baru</h1>
     <h2>Sign Up Form</h2>
     
     <form action="welcome.html" method="get">
-        <label for="first-name">First name:</label><br>
-        <input type="text" id="first-name" name="first-name"><br><br>
+        <label for="first-name">First name:</label>
+        <input type="text" id="first-name" name="first-name">
 
-        <label for="last-name">Last name:</label><br>
-        <input type="text" id="last-name" name="last-name"><br><br>
+        <label for="last-name">Last name:</label>
+        <input type="text" id="last-name" name="last-name">
 
-        <label>Gender:</label><br>
+        <label>Gender:</label>
         <input type="radio" id="male" name="gender" value="Male">
-        <label for="male">Male</label><br>
+        <label for="male">Male</label>
         <input type="radio" id="female" name="gender" value="Female">
-        <label for="female">Female</label><br><br>
+        <label for="female">Female</label>
 
-        <label for="nationality">Nationality:</label><br>
+        <label for="nationality">Nationality:</label>
         <select id="nationality" name="nationality">
             <option value="Indonesian">Indonesian</option>
             <option value="Singaporean">Singaporean</option>
             <option value="Malaysian">Malaysian</option>
             <option value="Other">Other</option>
-        </select><br><br>
+        </select>
 
-        <label>Language Spoken:</label><br>
+        <label>Language Spoken:</label>
         <input type="checkbox" id="bahasa" name="language" value="Bahasa Indonesia">
-        <label for="bahasa">Bahasa Indonesia</label><br>
+        <label for="bahasa">Bahasa Indonesia</label>
         <input type="checkbox" id="english" name="language" value="English">
-        <label for="english">English</label><br>
+        <label for="english">English</label>
         <input type="checkbox" id="other-language" name="language" value="Other">
-        <label for="other-language">Other</label><br><br>
+        <label for="other-language">Other</label>
 
-        <label for="bio">Bio:</label><br>
-        <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
 
         <input type="submit" value="Sign Up">
     </form>
