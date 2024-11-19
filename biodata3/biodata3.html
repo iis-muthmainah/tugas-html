@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata - Iis Muthmainah</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Latar belakang biru pastel */
+    body {
+      background-color: #dceffe; /* Biru pastel */
+    }
+
+    /* Membatasi ukuran video */
+    .video-container video {
+      width: 70%; /* Ukuran video lebih kecil (70% dari lebar kontainer) */
+      max-width: 100%; /* Pastikan video tidak melebihi lebar kontainer */
+      height: auto; /* Menjaga rasio aspek video */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <!-- Card untuk Biodata -->
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <!-- Foto Profil -->
+            <img src="foto.jpg" alt="Foto Profil Iis Muthmainah" class="rounded-circle border border-3 border-info img-fluid mb-4" style="width: 150px; height: 150px;">
+
+            <!-- Nama dan Kelas -->
+            <h4 class="card-title text-primary">Iis Muthmainah</h4>
+            <p class="text-muted">Kelas: XI RPL 1</p>
+
+            <!-- Alamat -->
+            <p class="badge bg-light text-dark">Alamat: Gempol Rawa</p>
+            <p class="badge bg-light text-dark">No tlp: 083890906756</p>
+            <p class="badge bg-light text-dark">Hobby: mendengarkan music</p>
+            <p class="badge bg-light text-dark">Ttl: tasikmalaya,1 agustus 2008</p>
+
+            <!-- Video Profil -->
+            <div class="mt-4 video-container">
+              <h5 class="text-muted">Video</h5>
+              <video controls>
+                <source src="video.newt.mp4" type="video/mp4">                
+              </video>
+            </div>
+
+            <!-- Audio Profil -->
+            <div class="mt-4">
+              <h5 class="text-muted">Audio</h5>
+              <audio controls class="w-100 rounded">
+                <source src="audio.mpeg" type="audio/mpeg">
+              </audio>
+            </div>
+
+            <!-- Tombol Tautan -->
+            <div class="mt-4">
+              <a href="#" class="btn btn-info text-white fw-bold w-75">Lihat Profil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
