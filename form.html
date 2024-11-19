@@ -4,44 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buat Account Baru</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #c6e3ff;
+        }
+        .form-header {
+            background: linear-gradient(45deg, #17a2b8, #17a2b8);
+            color: rgb(255, 255, 255);
+            padding: 2rem;
+        }
+        .btn-custom {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        .btn-custom:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+    </style>
 </head>
 <body>
-    <h1>Buat Account Baru</h1>
-    <h2>Sign Up Form</h2>
-    
-    <form action="welcome.html" method="get">
-        <label for="first-name">First name:</label><br>
-        <input type="text" id="first-name" name="first-name"><br><br>
+    <div class="container my-5">
+        <div class="form-header text-center mb-4 rounded">
+            <h1 class="display-4">Buat Account Baru</h1>
+            <p>Sign Up Form</p>
+        </div>
+        
+        <form action="welcome.html" method="get" class="bg-white p-4 rounded shadow-sm">
+            <div class="mb-3">
+                <label for="first-name" class="form-label">First Name:</label>
+                <input type="text" id="first-name" name="first-name" class="form-control">
+            </div>
 
-        <label for="last-name">Last name:</label><br>
-        <input type="text" id="last-name" name="last-name"><br><br>
+            <div class="mb-3">
+                <label for="last-name" class="form-label">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" class="form-control">
+            </div>
 
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="Male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="Female">
-        <label for="female">Female</label><br><br>
+            <div class="mb-3">
+                <label class="form-label">Gender:</label><br>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="male" name="gender" value="Male" class="form-check-input">
+                    <label for="male" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="female" name="gender" value="Female" class="form-check-input">
+                    <label for="female" class="form-check-label">Female</label>
+                </div>
+            </div>
 
-        <label for="nationality">Nationality:</label><br>
-        <select id="nationality" name="nationality">
-            <option value="Indonesian">Indonesian</option>
-            <option value="Singaporean">Singaporean</option>
-            <option value="Malaysian">Malaysian</option>
-            <option value="Other">Other</option>
-        </select><br><br>
+            <div class="mb-3">
+                <label for="nationality" class="form-label">Nationality:</label>
+                <select id="nationality" name="nationality" class="form-select">
+                    <option value="Indonesian">Indonesian</option>
+                    <option value="Singaporean">Singaporean</option>
+                    <option value="Malaysian">Malaysian</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
 
-        <label>Language Spoken:</label><br>
-        <input type="checkbox" id="bahasa" name="language" value="Bahasa Indonesia">
-        <label for="bahasa">Bahasa Indonesia</label><br>
-        <input type="checkbox" id="english" name="language" value="English">
-        <label for="english">English</label><br>
-        <input type="checkbox" id="other-language" name="language" value="Other">
-        <label for="other-language">Other</label><br><br>
+            <div class="mb-3">
+                <label class="form-label">Language Spoken:</label><br>
+                <div class="form-check">
+                    <input type="checkbox" id="bahasa" name="language" value="Bahasa Indonesia" class="form-check-input">
+                    <label for="bahasa" class="form-check-label">Bahasa Indonesia</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="english" name="language" value="English" class="form-check-input">
+                    <label for="english" class="form-check-label">English</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="other-language" name="language" value="Other" class="form-check-input">
+                    <label for="other-language" class="form-check-label">Other</label>
+                </div>
+            </div>
 
-        <label for="bio">Bio:</label><br>
-        <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+            <div class="mb-3">
+                <label for="bio" class="form-label">Bio:</label>
+                <textarea id="bio" name="bio" rows="4" class="form-control"></textarea>
+            </div>
 
-        <input type="submit" value="Sign Up">
-    </form>
+            <button type="submit" class="btn btn-custom w-100">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Link Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
